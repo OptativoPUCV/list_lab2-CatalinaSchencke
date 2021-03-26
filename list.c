@@ -138,6 +138,7 @@ void * popCurrent(List * list) {
           list->head=list->current->next;
           list->head->prev=NULL;
         }
+        list->current=nuevoNodo->next;
       }
       else{
         if (list->current->prev!=NULL){
@@ -150,7 +151,6 @@ void * popCurrent(List * list) {
         }
       }
   }
-  list->current=list->current->next;
   return nuevoNodo;
     
 }
