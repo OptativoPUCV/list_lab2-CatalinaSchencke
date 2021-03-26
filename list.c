@@ -150,8 +150,9 @@ void * popCurrent(List * list) {
           list->tail=NULL;
         }
       }
+
   }
-  return nuevoNodo;
+  return ((void*)(nuevoNodo->data));
     
 }
 
