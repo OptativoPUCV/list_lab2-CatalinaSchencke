@@ -127,7 +127,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-   Node* nuevoNodo = createNode((void*)list->current->data);
+   Node* nuevoNodo = createNode((void*)(list->current->data));
     if(list->current!=NULL){
       if (list->current->next!=NULL){
         if (list->current->prev!=NULL){
