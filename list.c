@@ -79,8 +79,14 @@ void pushFront(List * list, const void * data) {
   if (list->head!=NULL){
     list->head->prev = nuevoNodo;
     nuevoNodo->next =list->head;
+    list->head=nuevoNodo;
   }
-  list->head=nuevoNodo;
+  else{
+    list->head=nuevoNodo;
+    list->tail=nuevoNodo;
+  }
+
+
 }
 
 void pushBack(List * list, const void * data) {
